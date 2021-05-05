@@ -14,27 +14,27 @@ export class ProductService {
   getAllProducts(): Observable<any> {
     return this.httpClient.get(baseURL);
   }
-  
+
   getProducts(id: number): Observable<any> {
     return this.httpClient.get(`${baseURL}/${id}`);
   }
-    
+
   createProducts(data: any): Observable<any> {
     return this.httpClient.post(baseURL, data);
   }
-    
+
   updateProducts(id: number, data: any): Observable<any> {
     return this.httpClient.put(`${baseURL}/${id}`, data);
   }
-    
+
   deleteProducts(id: number): Observable<any> {
     return this.httpClient.delete(`${baseURL}/${id}`);
   }
-    
+
   deleteAllProducts(): Observable<any> {
     return this.httpClient.delete(baseURL);
   }
-    
+
   getProductsByName(name: any): Observable<any> {
     return this.httpClient.delete(`${baseURL}?name=${name}`);
   }

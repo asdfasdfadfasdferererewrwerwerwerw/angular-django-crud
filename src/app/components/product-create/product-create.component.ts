@@ -25,17 +25,15 @@ export class ProductCreateComponent implements OnInit {
       description: this.product.description
     };
 
-    console.log("data", data);
-
     this.productService.createProducts(data)
       .subscribe(
         response => {
-        console.log(response)
+        console.log(response);
         this.submitted = true;
       },
       error => {
         console.log(error);
-      }) 
+      });
   }
 
   newProduct(): void {
@@ -44,7 +42,6 @@ export class ProductCreateComponent implements OnInit {
       name: '',
       description: '',
       available: false
-    }
+    };
   }
-
 }
