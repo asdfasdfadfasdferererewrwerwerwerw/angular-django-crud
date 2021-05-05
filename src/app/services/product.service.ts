@@ -19,7 +19,7 @@ export class ProductService {
     return this.httpClient.get(`${baseURL}/${id}`);
   }
     
-  cteateProducts(data: any): Observable<any> {
+  createProducts(data: any): Observable<any> {
     return this.httpClient.post(baseURL, data);
   }
     
