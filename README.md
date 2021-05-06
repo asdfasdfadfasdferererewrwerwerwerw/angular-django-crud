@@ -1,8 +1,8 @@
 # AngularSimpleCrud
 
-  # Front-end: Angular. version 11.2.x
-  # Back-end: Django. version 3.x
-  # DataBase: PostgreSQL. version 12.x
+  ### Front-end: Angular. version 11.2.x
+  ### Back-end: Django. version 3.x
+  ### DataBase: PostgreSQL. version 12.x
 
 ## Development server
 
