@@ -60,6 +60,7 @@ export class ProductListComponent implements OnInit {
   }
 
   deleteAllProducts(): any {
-    this.products;
+    this.products = "";
+    this.allProducts = [];
   }
 }

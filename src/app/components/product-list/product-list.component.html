@@ -41,10 +41,10 @@
       <div *ngIf="currentProduct">
         <h4>Product</h4>
         <div>
-          <label><strong><p>Name:</p><input type="text" [value]="products.name"></strong></label> 
+          <label><strong><p>Name:</p><input type="text" [value]="products.name ? products.name : ''"></strong></label> 
         </div>
         <div>
-          <label><strong><p>Description:</p><input type="text" [value]="products.description"></strong></label>
+          <label><strong><p>Description:</p><input type="text" [value]="products.description ? products.description : ''"></strong></label>
         </div>
         <div>
           <label><strong>Status:</strong></label>
