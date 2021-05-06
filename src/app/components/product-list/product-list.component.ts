@@ -32,12 +32,12 @@ export class ProductListComponent implements OnInit {
       name: 'product 6',
       description: 'description 6'
     }
-  ]
+  ];
   products: any;
   currentProduct = true;
   currentIndex = -1;
   name = '';
-  
+
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
@@ -46,21 +46,42 @@ export class ProductListComponent implements OnInit {
 
   getAllProducts(): any {
     this.currentProduct = false;
-    this.products = this.allProducts;
+    this.productService.getAllProducts()
+        .subscribe(
+          response => {
+            console.log(response);
+            this.allProducts = response;
+          },
+          error => {
+            console.log(error);
+        });
   }
 
   searchByName(): any {
-    
+    this.productService.getProductsByName(this.name)
+        .subscribe(
+          response => {
+            console.log(response);
+            this.products = response;
+          },
+          error => {
+            console.log(error);
+        });
   }
 
   setCurrentProduct(product: any, i: any): any {
     this.currentProduct = true;
     this.currentIndex = i;
-    this.products = product
   }
 
   deleteAllProducts(): any {
-    this.products = "";
-    this.allProducts = [];
+    this.productService.deleteAllProducts()
+        .subscribe(
+          response => {
+            console.log(response);
+          },
+          error => {
+            console.log(error);
+        });
   }
 }

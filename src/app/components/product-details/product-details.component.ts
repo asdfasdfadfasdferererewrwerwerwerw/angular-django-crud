@@ -45,7 +45,7 @@ export class ProductDetailsComponent implements OnInit {
       description: 'description 6',
       available: false
     }
-  ]
+  ];
   currentproduct = null;
   message = '';
   currentProduct = {
@@ -63,26 +63,19 @@ export class ProductDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.message = '';
-    this.getProduct(this.route.snapshot.paramMap.get('id'))
+    this.getProduct(this.route.snapshot.paramMap.get('id'));
   }
 
   getProduct(id: any): void {
-    console.log(id);
-    this.allProducts.map((product) => {
-      if(product.id.toString() === id.toString()) {
-        console.log('same', product);
-        this.currentProduct = product;
-      }
-    });    
-    // this.productService.getProducts(id)
-    //     .subscribe(
-    //       product => {
-    //         console.log(product);
-    //         this.currentProduct = product;
-    //       },
-    //       error => {
-    //         console.log(error);
-    //     });
+    this.productService.getProducts(id)
+        .subscribe(
+          product => {
+            console.log(product);
+            this.currentProduct = product;
+          },
+          error => {
+            console.log(error);
+        });
 }
 
   updateProduct(): void {
@@ -90,7 +83,7 @@ export class ProductDetailsComponent implements OnInit {
         .subscribe(
           response => {
             console.log(response);
-            this.message = "The product successfully updated!";
+            this.message = 'The product successfully updated!';
           },
           error => {
             console.log(error);
@@ -102,6 +95,7 @@ export class ProductDetailsComponent implements OnInit {
         .subscribe(
           response => {
             console.log(response);
+            this.router.navigate(['/products']);
             this.message = 'You deleted the product!';
           },
           error => {
@@ -114,12 +108,12 @@ export class ProductDetailsComponent implements OnInit {
       name: this.currentProduct.name,
       description: this.currentProduct.description,
       abailable: state
-    }
+    };
 
     this.productService.updateProducts(this.currentProduct.id, data)
         .subscribe(
           response => {
-            this.currentProduct.available = state
+            this.currentProduct.available = state;
             console.log(response);
           },
           error => {
