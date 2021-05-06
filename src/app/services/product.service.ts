@@ -15,7 +15,7 @@ export class ProductService {
     return this.httpClient.get(baseURL);
   }
 
-  getProducts(id: number): Observable<any> {
+  getProducts(id: any): Observable<any> {
     return this.httpClient.get(`${baseURL}/${id}`);
   }
 
@@ -23,11 +23,11 @@ export class ProductService {
     return this.httpClient.post(baseURL, data);
   }
 
-  updateProducts(id: number, data: any): Observable<any> {
+  updateProducts(id: any, data: any): Observable<any> {
     return this.httpClient.put(`${baseURL}/${id}`, data);
   }
 
-  deleteProducts(id: number): Observable<any> {
+  deleteProducts(id: any): Observable<any> {
     return this.httpClient.delete(`${baseURL}/${id}`);
   }
 
