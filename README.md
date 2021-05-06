@@ -1,6 +1,8 @@
 # AngularSimpleCrud
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.11.
+  # Front-end: Angular. version 11.2.x
+  # Back-end: Django. version 3.x
+  # DataBase: PostgreSQL. version 12.x
 
 ## Development server
 
