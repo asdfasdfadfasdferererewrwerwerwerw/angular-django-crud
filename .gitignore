@@ -1,21 +1,21 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
-/frontemd/dist
-/frontemd/tmp
-/frontemd/out-tsc
+/frontend/dist
+/frontend/tmp
+/frontend/out-tsc
 # Only exists if Bazel was run
-/frontemd/bazel-out
+/frontend/bazel-out
 
 # dependencies
 /frontend/node_modules
 
 # profiling files
-/frontemd/chrome-profiler-events*.json
-/frontemd/speed-measure-plugin*.json
+/frontend/chrome-profiler-events*.json
+/frontend/speed-measure-plugin*.json
 
 # IDEs and editors
-/frontemd/.idea
+/frontend/.idea
 .project
 .classpath
 .c9/
