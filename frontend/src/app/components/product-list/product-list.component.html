@@ -27,7 +27,7 @@
             *ngFor="let product of allProducts; let i = index"
           [class.active]="i == currentIndex"
           (click)="setCurrentProduct(product, i)"
-        >
+        > 
             <!-- <p>Name : {{ product }}</p>
             <p>Description : {{ product.description }}</p> -->
         </li>
