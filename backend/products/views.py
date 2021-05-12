@@ -1,5 +1,4 @@
 from django.shortcuts import render
-<<<<<<< HEAD
 from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
@@ -16,7 +15,3 @@ def products_list(request) :
     products_json = ProductSerializer(products)
     print('\n', "!!!!!!!!products_json!!!!!!!!!", products_json, '\'')    
     return Response(data=products_json, status=status.HTTP_200_OK)
-=======
-
-# Create your views here.
->>>>>>> d0418bc1045dba1a0ec9693902281ad34af80eac
