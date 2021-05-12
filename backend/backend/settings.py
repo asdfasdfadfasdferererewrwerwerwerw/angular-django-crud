@@ -83,7 +83,11 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
+<<<<<<< HEAD
         'NAME': 'db.sqlite3',
+=======
+        'NAME': 'db',
+>>>>>>> d0418bc1045dba1a0ec9693902281ad34af80eac
     }
 }
 
@@ -133,7 +137,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # cors
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = (
+<<<<<<< HEAD
     'http://localhost:4200',
     'http://localhost:8080',
+=======
+>>>>>>> d0418bc1045dba1a0ec9693902281ad34af80eac
     'http://localhost:8081',
 )
